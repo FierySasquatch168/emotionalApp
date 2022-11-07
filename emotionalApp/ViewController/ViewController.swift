@@ -8,8 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
+    
     @IBOutlet weak var registrationButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
@@ -23,8 +22,5 @@ class ViewController: UIViewController {
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 32
     }
-
-//    NSAttributedString
-
 }
 
