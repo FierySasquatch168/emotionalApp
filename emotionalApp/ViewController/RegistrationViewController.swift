@@ -40,7 +40,11 @@ class RegistrationViewController: UIViewController {
     
     private func goToNextVC() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "SecondScreenViewController") else { return }
+        // с возможностью вернуться на предыдущую страницу
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        // без возможности вернуться
+        // self.present(vc, animated: true)
     }
     
     private func showNoDataAlert() {
@@ -55,7 +59,7 @@ class RegistrationViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    private func showWrongPasswordAlert() {
+    private func showPasswordsDoNotMatch() {
         let alert = UIAlertController(
             title: "Ошибка",
             message: "Пароли не совпадают",
