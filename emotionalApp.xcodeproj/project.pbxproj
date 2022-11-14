@@ -17,7 +17,6 @@
 		3795B38C29225ED800EAEC8A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38B29225ED800EAEC8A /* LibraryViewController.swift */; };
 		3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38D29225EE200EAEC8A /* ProfileViewController.swift */; };
 		37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */; };
-		37A8872B29195F780072D997 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872A29195F780072D997 /* UserDataModel.swift */; };
 		37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6C28F6F0160018C120 /* AppDelegate.swift */; };
 		37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6E28F6F0160018C120 /* SceneDelegate.swift */; };
 		37B99E7128F6F0160018C120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E7028F6F0160018C120 /* ViewController.swift */; };
@@ -30,6 +29,7 @@
 		37C2626A291AFBD60046DEE6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C26269291AFBD60046DEE6 /* ColorExtension.swift */; };
 		37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C68291A5A010065BA36 /* RegistrationViewController.swift */; };
 		37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */; };
+		37D2A9D129229B13001EA489 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2A9D029229B13001EA489 /* UserDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,6 @@
 		3795B38B29225ED800EAEC8A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		3795B38D29225EE200EAEC8A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickScreenViewController.swift; sourceTree = "<group>"; };
-		37A8872A29195F780072D997 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		37B99E6928F6F0160018C120 /* emotionalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotionalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B99E6C28F6F0160018C120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B99E6E28F6F0160018C120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		37C26269291AFBD60046DEE6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		37D12C68291A5A010065BA36 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesDataModel.swift; sourceTree = "<group>"; };
+		37D2A9D029229B13001EA489 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		37A8872929195F610072D997 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				37A8872A29195F780072D997 /* UserDataModel.swift */,
+				37D2A9D029229B13001EA489 /* UserDataModel.swift */,
 				37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */,
 				37C0AA06291BE77B00EC2B1A /* TimeModel.swift */,
 				37C0AA02291BBD5600EC2B1A /* AlertModel.swift */,
@@ -273,9 +273,9 @@
 				37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */,
 				3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */,
 				377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */,
-				37A8872B29195F780072D997 /* UserDataModel.swift in Sources */,
 				37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */,
 				3795B38C29225ED800EAEC8A /* LibraryViewController.swift in Sources */,
+				37D2A9D129229B13001EA489 /* UserDataModel.swift in Sources */,
 				37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */,
 				3795B38829225EB700EAEC8A /* DiaryViewController.swift in Sources */,
 				37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */,
