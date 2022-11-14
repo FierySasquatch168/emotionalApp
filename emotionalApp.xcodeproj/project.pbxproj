@@ -11,8 +11,12 @@
 		371817EF291833980037978E /* KyivTypeSans-VarGX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */; };
 		371817F12918341B0037978E /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 371817F02918341B0037978E /* Inter-Light.otf */; };
 		372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372381C529190F8F003C3D90 /* SecondScreenViewController.swift */; };
-		372381C829190FB3003C3D90 /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372381C729190FB3003C3D90 /* ThirdScreenViewController.swift */; };
-		37A8872829195BBA0072D997 /* FourthScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* FourthScreenViewController.swift */; };
+		377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6B6B29225B6000F55B55 /* TabBarViewController.swift */; };
+		3795B38829225EB700EAEC8A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38729225EB700EAEC8A /* DiaryViewController.swift */; };
+		3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */; };
+		3795B38C29225ED800EAEC8A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38B29225ED800EAEC8A /* LibraryViewController.swift */; };
+		3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38D29225EE200EAEC8A /* ProfileViewController.swift */; };
+		37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */; };
 		37A8872B29195F780072D997 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872A29195F780072D997 /* UserDataModel.swift */; };
 		37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6C28F6F0160018C120 /* AppDelegate.swift */; };
 		37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6E28F6F0160018C120 /* SceneDelegate.swift */; };
@@ -21,6 +25,8 @@
 		37B99E7628F6F0170018C120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B99E7528F6F0170018C120 /* Assets.xcassets */; };
 		37B99E7928F6F0170018C120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B99E7728F6F0170018C120 /* LaunchScreen.storyboard */; };
 		37C0A9FF291B9E0800EC2B1A /* UserStatisticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0A9FE291B9E0800EC2B1A /* UserStatisticService.swift */; };
+		37C0AA03291BBD5600EC2B1A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0AA02291BBD5600EC2B1A /* AlertModel.swift */; };
+		37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0AA06291BE77B00EC2B1A /* TimeModel.swift */; };
 		37C2626A291AFBD60046DEE6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C26269291AFBD60046DEE6 /* ColorExtension.swift */; };
 		37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C68291A5A010065BA36 /* RegistrationViewController.swift */; };
 		37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */; };
@@ -31,8 +37,12 @@
 		371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KyivTypeSans-VarGX.ttf"; sourceTree = "<group>"; };
 		371817F02918341B0037978E /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
 		372381C529190F8F003C3D90 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
-		372381C729190FB3003C3D90 /* ThirdScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewController.swift; sourceTree = "<group>"; };
-		37A8872729195BBA0072D997 /* FourthScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreenViewController.swift; sourceTree = "<group>"; };
+		377F6B6B29225B6000F55B55 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		3795B38729225EB700EAEC8A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		3795B38B29225ED800EAEC8A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		3795B38D29225EE200EAEC8A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickScreenViewController.swift; sourceTree = "<group>"; };
 		37A8872A29195F780072D997 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		37B99E6928F6F0160018C120 /* emotionalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotionalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B99E6C28F6F0160018C120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +53,8 @@
 		37B99E7828F6F0170018C120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37B99E7A28F6F0170018C120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C0A9FE291B9E0800EC2B1A /* UserStatisticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatisticService.swift; sourceTree = "<group>"; };
+		37C0AA02291BBD5600EC2B1A /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		37C0AA06291BE77B00EC2B1A /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		37C26269291AFBD60046DEE6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		37D12C68291A5A010065BA36 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesDataModel.swift; sourceTree = "<group>"; };
@@ -80,13 +92,10 @@
 		371817F529184E2D0037978E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				37B99E7028F6F0160018C120 /* ViewController.swift */,
-				372381C529190F8F003C3D90 /* SecondScreenViewController.swift */,
-				372381C729190FB3003C3D90 /* ThirdScreenViewController.swift */,
-				37A8872729195BBA0072D997 /* FourthScreenViewController.swift */,
-				37D12C68291A5A010065BA36 /* RegistrationViewController.swift */,
+				37EAE2AB29224F9B006FCA2E /* NavigationController */,
 				37B99E7228F6F0160018C120 /* Main.storyboard */,
 				37B99E7728F6F0170018C120 /* LaunchScreen.storyboard */,
+				37EAE2AC29224FAF006FCA2E /* TabBarController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -112,6 +121,8 @@
 			children = (
 				37A8872A29195F780072D997 /* UserDataModel.swift */,
 				37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */,
+				37C0AA06291BE77B00EC2B1A /* TimeModel.swift */,
+				37C0AA02291BBD5600EC2B1A /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,6 +165,29 @@
 				37C26269291AFBD60046DEE6 /* ColorExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		37EAE2AB29224F9B006FCA2E /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				37B99E7028F6F0160018C120 /* ViewController.swift */,
+				37D12C68291A5A010065BA36 /* RegistrationViewController.swift */,
+				372381C529190F8F003C3D90 /* SecondScreenViewController.swift */,
+				37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		37EAE2AC29224FAF006FCA2E /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				377F6B6B29225B6000F55B55 /* TabBarViewController.swift */,
+				3795B38729225EB700EAEC8A /* DiaryViewController.swift */,
+				3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */,
+				3795B38B29225ED800EAEC8A /* LibraryViewController.swift */,
+				3795B38D29225EE200EAEC8A /* ProfileViewController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,13 +265,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */,
-				372381C829190FB3003C3D90 /* ThirdScreenViewController.swift in Sources */,
+				37C0AA03291BBD5600EC2B1A /* AlertModel.swift in Sources */,
+				3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */,
 				37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */,
 				37B99E7128F6F0160018C120 /* ViewController.swift in Sources */,
 				37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */,
+				37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */,
+				3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */,
+				377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */,
 				37A8872B29195F780072D997 /* UserDataModel.swift in Sources */,
 				37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */,
-				37A8872829195BBA0072D997 /* FourthScreenViewController.swift in Sources */,
+				3795B38C29225ED800EAEC8A /* LibraryViewController.swift in Sources */,
+				37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */,
+				3795B38829225EB700EAEC8A /* DiaryViewController.swift in Sources */,
 				37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */,
 				37C2626A291AFBD60046DEE6 /* ColorExtension.swift in Sources */,
 				37C0A9FF291B9E0800EC2B1A /* UserStatisticService.swift in Sources */,

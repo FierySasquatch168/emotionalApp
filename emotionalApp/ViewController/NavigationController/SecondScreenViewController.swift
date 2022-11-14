@@ -35,85 +35,88 @@ class SecondScreenViewController: UIViewController {
     
     @IBAction func becomeHappierButtonTapped(_ sender: UIButton) {
         
-        switch becomeHappierButton.backgroundColor {
-        case UIColor.customGray: becomeHappierButton.backgroundColor = .customBlue
-        case UIColor.customBlue: becomeHappierButton.backgroundColor = .customGray
-        default: becomeHappierButton.backgroundColor = .customGray
-        }
-        
-        if becomeHappierButton.backgroundColor == .customGray {
-            happier = false
-        } else {
+        switch becomeHappierButton.layer.borderWidth {
+        case 0:
+            becomeHappierButton.layer.borderWidth = 1;
+            becomeHappierButton.layer.borderColor = UIColor.customPink?.cgColor;
             happier = true
+        case 1:
+            becomeHappierButton.layer.borderWidth = 0;
+            happier = false
+        default: becomeHappierButton.layer.borderWidth = 0
         }
     }
     
     @IBAction func ridOfStressButtonTapped(_ sender: UIButton) {
         
-        switch ridOfStressButton.backgroundColor {
-        case UIColor.customGray: ridOfStressButton.backgroundColor = .customBlue
-        case UIColor.customBlue: ridOfStressButton.backgroundColor = .customGray
-        default: ridOfStressButton.backgroundColor = .customGray
-        }
-        
-        if ridOfStressButton.backgroundColor == .customGray {
-            noStress = false
-        } else {
+        switch ridOfStressButton.layer.borderWidth {
+        case 0:
+            ridOfStressButton.layer.borderWidth = 1;
+            ridOfStressButton.layer.borderColor = UIColor.customPink?.cgColor;
             noStress = true
+        case 1:
+            ridOfStressButton.layer.borderWidth = 0;
+            noStress = false
+        default: ridOfStressButton.layer.borderWidth = 0
         }
     }
     
     @IBAction func feelCalmerButtonTapped(_ sender: UIButton) {
         
-        switch feelCalmerButton.backgroundColor {
-        case UIColor.customGray: feelCalmerButton.backgroundColor = .customBlue
-        case UIColor.customBlue: feelCalmerButton.backgroundColor = .customGray
-        default: feelCalmerButton.backgroundColor = .customGray
-        }
-        
-        if feelCalmerButton.backgroundColor == .customGray {
-            calmer = false
-        } else {
+        switch feelCalmerButton.layer.borderWidth {
+        case 0:
+            feelCalmerButton.layer.borderWidth = 1;
+            feelCalmerButton.layer.borderColor = UIColor.customPink?.cgColor;
             calmer = true
+        case 1:
+            feelCalmerButton.layer.borderWidth = 0;
+            calmer = false
+        default: feelCalmerButton.layer.borderWidth = 0
         }
     }
     
     @IBAction func copeWithFearsButtonTapped(_ sender: UIButton) {
         
-        switch copeWithFearsButton.backgroundColor {
-        case UIColor.customGray: copeWithFearsButton.backgroundColor = .customBlue
-        case UIColor.customBlue: copeWithFearsButton.backgroundColor = .customGray
-        default: copeWithFearsButton.backgroundColor = .customGray
-        }
-        
-        if copeWithFearsButton.backgroundColor == .customGray {
-            noFears = false
-        } else {
+        switch copeWithFearsButton.layer.borderWidth {
+        case 0:
+            copeWithFearsButton.layer.borderWidth = 1;
+            copeWithFearsButton.layer.borderColor = UIColor.customPink?.cgColor;
             noFears = true
+        case 1:
+            copeWithFearsButton.layer.borderWidth = 0;
+            noFears = false
+        default: copeWithFearsButton.layer.borderWidth = 0
         }
     }
     
     @IBAction func analyzeMoodButtonTapped(_ sender: UIButton) {
         
-        switch analyzeMoodButton.backgroundColor {
-        case UIColor.customGray: analyzeMoodButton.backgroundColor = .customBlue
-        case UIColor.customBlue: analyzeMoodButton.backgroundColor = .customGray
-        default: analyzeMoodButton.backgroundColor = .customGray
-        }
-        
-        if analyzeMoodButton.backgroundColor == .customGray {
-            mood = false
-        } else {
+        switch analyzeMoodButton.layer.borderWidth {
+        case 0:
+            analyzeMoodButton.layer.borderWidth = 1;
+            analyzeMoodButton.layer.borderColor = UIColor.customPink?.cgColor;
             mood = true
+        case 1:
+            analyzeMoodButton.layer.borderWidth = 0;
+            mood = false
+        default: analyzeMoodButton.layer.borderWidth = 0
         }
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         userStatistic?.storePreferences(become: happier, of: noStress, feel: calmer, cope: noFears, analyze: mood)
+        goToNextVC(vc: "TimePickScreenViewController")
         print("\(preferenceCheck())")
     }
     
-    // TODO: Не сохраняет модель, надо проверить
+    private func goToNextVC(vc: String) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
+        // с возможностью вернуться на предыдущую страницу
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // без возможности вернуться
+        // self.present(vc, animated: true)
+    }
     
     private func preferenceCheck() -> UserPreferencesDataModel {
         guard let data = userDefaults.data(forKey: Preferences.userPreferences.rawValue), let record = try? JSONDecoder().decode(UserPreferencesDataModel.self, from: data) else {

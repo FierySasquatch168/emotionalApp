@@ -25,21 +25,16 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func registerActionButton(_ sender: UIButton) {
-        if !nameTextField.text!.isEmpty && !ageTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && repeatPasswordTextField.text == passwordTextField.text {
-            store(name: nameTextField.text!, age: ageTextField.text!, login: loginTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
-            goToNextVC()
-            print("\(userCheck())")
-        } else {
-                showNoDataAlert()
-        }
+//        registrationCheck()
+        goToNextVC(vc: "SecondScreenViewController")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private func goToNextVC() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "SecondScreenViewController") else { return }
+    private func goToNextVC(vc: String) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
         // с возможностью вернуться на предыдущую страницу
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -92,6 +87,16 @@ class RegistrationViewController: UIViewController {
             return .init(name: "NO", age: "NO", login: "NO", email: "NO", password: "NO")
         }
         return record
+    }
+    
+    private func registrationCheck() {
+        if !nameTextField.text!.isEmpty && !ageTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && repeatPasswordTextField.text == passwordTextField.text {
+            store(name: nameTextField.text!, age: ageTextField.text!, login: loginTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
+            goToNextVC(vc: "SecondScreenViewController")
+            print("\(userCheck())")
+        } else {
+                showNoDataAlert()
+        }
     }
 
 }

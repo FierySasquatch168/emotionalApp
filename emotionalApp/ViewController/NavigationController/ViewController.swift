@@ -14,8 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+   
+    
+    @IBAction func registrationActionButton(_ sender: Any) {
+        goToNextVC(vc: "RegistrationViewController")
+    }
+    
+    
     @IBAction func startButtonAction(_ sender: Any) {
-        userCheck()
+//        userCheck()
+        goToNextVC(vc: "TabBarViewController")
     }
     
     private var userDefaults = UserDefaults.standard
@@ -27,10 +35,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\(userRegistered())")
-        logInTextField.layer.borderWidth = 1
         logInTextField.layer.cornerRadius = 32
-        passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 32
+    }
+    
+    private func goToNextVC(vc: String) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showNoUserFound() {
@@ -56,10 +67,7 @@ class ViewController: UIViewController {
         guard let data = userDefaults.data(forKey: Keys.userData.rawValue),
                 let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else { return }
 //
-        if record.login.lowercased() == logInTextField.text!.lowercased() && record.password == passwordTextField.text {
-            guard let vc = storyboard?.instantiateViewController(withIdentifier: "SecondScreenViewController") else { return }
-            // с возможностью вернуться на предыдущую страницу
-            self.navigationController?.pushViewController(vc, animated: true) }
+        if record.login.lowercased() == logInTextField.text!.lowercased() && record.password == passwordTextField.text { goToNextVC(vc: "TabBarViewController") }
 
         if record.login.lowercased() == logInTextField.text?.lowercased() && record.password != passwordTextField.text {
             showWrongPassword()
