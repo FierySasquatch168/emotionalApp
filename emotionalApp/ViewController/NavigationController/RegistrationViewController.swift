@@ -112,3 +112,32 @@ class RegistrationViewController: UIViewController {
     }
 
 }
+
+// MARK: Extensions
+
+//extension RegistrationViewController {
+//    
+//    private func registerKeyboardNotification() {
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(keyboardWillShow),
+//                                               name: UIResponder.keyboardWillShowNotification,
+//                                               object: nil)
+//        
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(keyboardWillHide),
+//                                               name: UIResponder.keyboardWillShowNotification,
+//                                               object: nil)
+//    }
+//    
+//    
+//    
+//    @objc private func keyboardWillShow(notification: Notification) {
+//        let userInfo = notification.userInfo
+//        let keyboardHeight = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//        scrollView.setContentOffset = CGPoint(x: 0, y: keyboardHeight.height / 2)
+//    }
+//    
+//    @objc private func keyboardWillHide(notification: Notification) {
+//        scrollView.setContentOffset = CGPoint.zero
+//    }
+//}

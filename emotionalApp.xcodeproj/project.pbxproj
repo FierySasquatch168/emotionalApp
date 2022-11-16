@@ -19,6 +19,7 @@
 		3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38D29225EE200EAEC8A /* ProfileViewController.swift */; };
 		37A4F34529251DE30049FF64 /* MoodPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34429251DE30049FF64 /* MoodPickerModel.swift */; };
 		37A4F34729251F0B0049FF64 /* MoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34629251F0B0049FF64 /* MoodImageView.swift */; };
+		37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F35229257D420049FF64 /* MoodBoardViewController.swift */; };
 		37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */; };
 		37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6C28F6F0160018C120 /* AppDelegate.swift */; };
 		37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6E28F6F0160018C120 /* SceneDelegate.swift */; };
@@ -50,6 +51,7 @@
 		3795B38D29225EE200EAEC8A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37A4F34429251DE30049FF64 /* MoodPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerModel.swift; sourceTree = "<group>"; };
 		37A4F34629251F0B0049FF64 /* MoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodImageView.swift; sourceTree = "<group>"; };
+		37A4F35229257D420049FF64 /* MoodBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBoardViewController.swift; sourceTree = "<group>"; };
 		37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickScreenViewController.swift; sourceTree = "<group>"; };
 		37B99E6928F6F0160018C120 /* emotionalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotionalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B99E6C28F6F0160018C120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				372381C529190F8F003C3D90 /* SecondScreenViewController.swift */,
 				37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */,
 				37D2A9D22922A7EC001EA489 /* AddMoodViewController.swift */,
+				37A4F35229257D420049FF64 /* MoodBoardViewController.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */,
 				37B99E7128F6F0160018C120 /* ViewController.swift in Sources */,
 				37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */,
+				37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */,
 				37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */,
 				3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */,
 				377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */,
