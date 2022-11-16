@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Locksmith
 
 class RegistrationViewController: UIViewController {
     
@@ -21,12 +22,12 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     private enum Keys: String {
-        case userData
+        case userData, name, age, login, email, password
     }
     
     @IBAction func registerActionButton(_ sender: UIButton) {
-//        registrationCheck()
-        goToNextVC(vc: "SecondScreenViewController")
+        registrationCheck()
+//        goToNextVC(vc: "SecondScreenViewController")
     }
     
     override func viewDidLoad() {
@@ -67,26 +68,37 @@ class RegistrationViewController: UIViewController {
     }
     
     private func store(name: String, age: String, login: String, email: String, password: String) {
-        let currentUser = UserDataModel(
-            name: nameTextField.text ?? "",
-            age: ageTextField.text ?? "",
-            login: loginTextField.text ?? "",
-            email: emailTextField.text ?? "",
-            password: passwordTextField.text ?? "")
-        
-        guard let data = try? JSONEncoder().encode(currentUser) else {
-            print("Невозможно собрать модель из currentUser")
-            return
+        if let name = nameTextField.text, let age = ageTextField.text, let login = loginTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
+            //        = UserDataModel(
+            //            name: nameTextField.text ?? "",
+            //            age: ageTextField.text ?? "",
+            //            login: loginTextField.text ?? "",
+            //            email: emailTextField.text ?? "",
+            //            password: passwordTextField.text ?? "")
+            
+            //        guard let data = try? JSONEncoder().encode(currentUser) else {
+            //            print("Невозможно собрать модель из currentUser")
+            //            return
+            //        }
+            
+            //        userDefaults.set(data, forKey: Keys.userData.rawValue)
+            do {
+                try Locksmith.saveData(data: ["name": name, "age": age, "login": login, "email": email, "password": password], forUserAccount: loginTextField.text ?? "NoUser")
+            } catch {
+                print("Unable to save Data")
+            }
         }
-        
-        userDefaults.set(data, forKey: Keys.userData.rawValue)
     }
     
     private func userCheck() -> UserDataModel {
-        guard let data = userDefaults.data(forKey: Keys.userData.rawValue), let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else {
-            return .init(name: "NO", age: "NO", login: "NO", email: "NO", password: "NO")
-        }
-        return record
+                guard let data = userDefaults.data(forKey: Keys.userData.rawValue), let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else {
+                    return .init(name: "NO", age: "NO", login: "NO", email: "NO", password: "NO")
+                }
+                return record
+//        guard let dictionary = Locksmith.loadDataForUserAccount(userAccount: "MyAccount") else {
+//            return
+//        }
+//        return dictionary
     }
     
     private func registrationCheck() {
