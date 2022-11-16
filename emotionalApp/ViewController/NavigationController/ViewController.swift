@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Locksmith
 
 class ViewController: UIViewController {
     
@@ -22,8 +23,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func startButtonAction(_ sender: Any) {
-//        userCheck()
-        goToNextVC(vc: "TabBarViewController")
+        let dictionary = Locksmith.loadDataForUserAccount(userAccount: logInTextField.text ?? "")
+        print(dictionary)
+        userCheck()
+//        goToNextVC(vc: "TabBarViewController")
     }
     
     private var userDefaults = UserDefaults.standard
@@ -32,29 +35,24 @@ class ViewController: UIViewController {
         case userData
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(userRegistered())")
+//        print("\(userRegistered())")
         logInTextField.layer.cornerRadius = 32
         passwordTextField.layer.cornerRadius = 32
     }
     
+    // MARK: Private funcs
+    
     private func goToNextVC(vc: String) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
-    private func showNoUserFound() {
-        let alert = UIAlertController(
-            title: "Ошибка",
-            message: "Заполните все поля",
-            preferredStyle: .alert)
-
-        let action = UIAlertAction(title: "OK", style: .default)
-
-        alert.addAction(action)
-        self.present(alert, animated: true)
-    }
+    // MARK: UserCheckFunc - переделать проверку с UserDefaults на KeyChain
 
     private func userRegistered() -> UserDataModel {
         guard let data = userDefaults.data(forKey: Keys.userData.rawValue), let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else {
@@ -65,8 +63,9 @@ class ViewController: UIViewController {
 
     private func userCheck() {
         guard let data = userDefaults.data(forKey: Keys.userData.rawValue),
+//        guard let data = Locksmith.loadDataForUserAccount(userAccount: "MyAccount"),
                 let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else { return }
-//
+
         if record.login.lowercased() == logInTextField.text!.lowercased() && record.password == passwordTextField.text { goToNextVC(vc: "TabBarViewController") }
 
         if record.login.lowercased() == logInTextField.text?.lowercased() && record.password != passwordTextField.text {
@@ -118,6 +117,18 @@ class ViewController: UIViewController {
         let action = UIAlertAction(
             title: "OK",
             style: .default)
+
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    private func showNoUserFound() {
+        let alert = UIAlertController(
+            title: "Ошибка",
+            message: "Заполните все поля",
+            preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "OK", style: .default)
 
         alert.addAction(action)
         self.present(alert, animated: true)

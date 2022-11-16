@@ -112,7 +112,7 @@ class SecondScreenViewController: UIViewController {
     private func goToNextVC(vc: String) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
         // с возможностью вернуться на предыдущую страницу
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
         
         // без возможности вернуться
         // self.present(vc, animated: true)
