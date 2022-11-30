@@ -278,7 +278,7 @@
                                 </constraints>
                             </imageView>
                             <navigationBar hidden="YES" contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-HM-JoJ">
-                                <rect key="frame" x="-12" y="47" width="392" height="44"/>
+                                <rect key="frame" x="-12" y="47" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -461,7 +461,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar hidden="YES" contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azm-kg-8p1">
-                                <rect key="frame" x="-12" y="400" width="388" height="44"/>
+                                <rect key="frame" x="-12" y="400" width="387" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -529,7 +529,7 @@
                                 <locale key="locale" localeIdentifier="ru"/>
                             </datePicker>
                             <navigationBar hidden="YES" contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9E-Op-VFZ">
-                                <rect key="frame" x="-10" y="400" width="391" height="44"/>
+                                <rect key="frame" x="-13" y="400" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                         </subviews>
@@ -897,6 +897,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Business"/>
+                                                <connections>
+                                                    <action selector="workButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="b5J-YR-YAH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-m6-APP">
                                                 <rect key="frame" x="87.666666666666671" y="0.0" width="67.000000000000014" height="68"/>
@@ -904,6 +907,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Friends"/>
+                                                <connections>
+                                                    <action selector="friendsButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="VGn-VV-Ord"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRD-Kb-CBE">
                                                 <rect key="frame" x="175.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -911,6 +917,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Guru"/>
+                                                <connections>
+                                                    <action selector="relaxButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="sMK-mY-7hn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoH-Mw-cF7">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -918,6 +927,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Student Male"/>
+                                                <connections>
+                                                    <action selector="studyButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="PzA-jm-xbP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -933,6 +945,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Heart Lock"/>
+                                                <connections>
+                                                    <action selector="loveButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="sOL-Zb-qWB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KX8-AM-s7g">
                                                 <rect key="frame" x="87.666666666666671" y="0.0" width="67.000000000000014" height="68"/>
@@ -940,6 +955,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Sun"/>
+                                                <connections>
+                                                    <action selector="weatherButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="yQu-my-7Lv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPd-Ey-Nqq">
                                                 <rect key="frame" x="175.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -947,6 +965,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Home"/>
+                                                <connections>
+                                                    <action selector="familyButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="l2E-K8-2fa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UU1-vu-yNb">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -954,6 +975,9 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Plane"/>
+                                                <connections>
+                                                    <action selector="vacationButtonTapped:" destination="ydP-JY-JMr" eventType="touchUpInside" id="zsn-i1-Nyd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1012,7 +1036,6 @@
                     <navigationItem key="navigationItem" id="JY3-sD-awv"/>
                     <connections>
                         <outlet property="bottomImageView" destination="pV9-Vb-Sl4" id="4zg-2D-S6Y"/>
-                        <outlet property="buttonStack" destination="HZH-Vq-aKP" id="fT7-5t-z8l"/>
                         <outlet property="dateLabel" destination="zEw-UA-yEo" id="DhG-RG-xao"/>
                         <outlet property="familyButton" destination="NPd-Ey-Nqq" id="u3B-5a-mhr"/>
                         <outlet property="friendsButton" destination="eZQ-m6-APP" id="uZT-FK-Bhe"/>
