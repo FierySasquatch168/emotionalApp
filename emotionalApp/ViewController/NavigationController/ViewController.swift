@@ -29,7 +29,7 @@ class ViewController: UIViewController {
                 
                 print(dictionary)
         //        userCheck()
-        //        goToNextVC(vc: "TabBarViewController")
+                goToNextVC(vc: "TabBarViewController")
     }
     
     private var userDefaults = UserDefaults.standard
