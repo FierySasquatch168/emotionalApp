@@ -21,6 +21,8 @@
 		37A4F34729251F0B0049FF64 /* MoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34629251F0B0049FF64 /* MoodImageView.swift */; };
 		37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F35229257D420049FF64 /* MoodBoardViewController.swift */; };
 		37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */; };
+		37AA2CA0292FBB6200728EDC /* AuthentificationTarget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 37AA2C94292FBB6200728EDC /* AuthentificationTarget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37B2E6832926288200E27191 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37B2E6822926288200E27191 /* Inter-Medium.otf */; };
 		37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6C28F6F0160018C120 /* AppDelegate.swift */; };
 		37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6E28F6F0160018C120 /* SceneDelegate.swift */; };
 		37B99E7128F6F0160018C120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E7028F6F0160018C120 /* ViewController.swift */; };
@@ -36,6 +38,30 @@
 		37D2A9D129229B13001EA489 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2A9D029229B13001EA489 /* UserDataModel.swift */; };
 		37D2A9D32922A7EC001EA489 /* AddMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D2A9D22922A7EC001EA489 /* AddMoodViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37AA2C9E292FBB6200728EDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37B99E6128F6F0160018C120 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37AA2C93292FBB6200728EDC;
+			remoteInfo = AuthentificationTarget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37AA2CA1292FBB6200728EDC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				37AA2CA0292FBB6200728EDC /* AuthentificationTarget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		187E78B04DA4936C60E763B6 /* Pods_emotionalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emotionalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +79,8 @@
 		37A4F34629251F0B0049FF64 /* MoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodImageView.swift; sourceTree = "<group>"; };
 		37A4F35229257D420049FF64 /* MoodBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBoardViewController.swift; sourceTree = "<group>"; };
 		37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickScreenViewController.swift; sourceTree = "<group>"; };
+		37AA2C94292FBB6200728EDC /* AuthentificationTarget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AuthentificationTarget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B2E6822926288200E27191 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		37B99E6928F6F0160018C120 /* emotionalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotionalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B99E6C28F6F0160018C120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B99E6E28F6F0160018C120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +101,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37AA2C91292FBB6200728EDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B99E6628F6F0160018C120 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +133,7 @@
 				371817EC291833170037978E /* Gruppo-Regular.ttf */,
 				371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */,
 				371817F02918341B0037978E /* Inter-Light.otf */,
+				37B2E6822926288200E27191 /* Inter-Medium.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -164,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				37B99E6928F6F0160018C120 /* emotionalApp.app */,
+				37AA2C94292FBB6200728EDC /* AuthentificationTarget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +266,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37AA2C93292FBB6200728EDC /* AuthentificationTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AA2CA4292FBB6200728EDC /* Build configuration list for PBXNativeTarget "AuthentificationTarget" */;
+			buildPhases = (
+				37AA2C90292FBB6200728EDC /* Sources */,
+				37AA2C91292FBB6200728EDC /* Frameworks */,
+				37AA2C92292FBB6200728EDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthentificationTarget;
+			productName = AuthentificationTarget;
+			productReference = 37AA2C94292FBB6200728EDC /* AuthentificationTarget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		37B99E6828F6F0160018C120 /* emotionalApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37B99E7D28F6F0170018C120 /* Build configuration list for PBXNativeTarget "emotionalApp" */;
@@ -238,10 +292,12 @@
 				37B99E6628F6F0160018C120 /* Frameworks */,
 				37B99E6728F6F0160018C120 /* Resources */,
 				91F0F5A4139F5A47CDA9DE68 /* [CP] Embed Pods Frameworks */,
+				37AA2CA1292FBB6200728EDC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37AA2C9F292FBB6200728EDC /* PBXTargetDependency */,
 			);
 			name = emotionalApp;
 			productName = emotionalApp;
@@ -255,9 +311,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					37AA2C93292FBB6200728EDC = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					37B99E6828F6F0160018C120 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -277,15 +336,24 @@
 			projectRoot = "";
 			targets = (
 				37B99E6828F6F0160018C120 /* emotionalApp */,
+				37AA2C93292FBB6200728EDC /* AuthentificationTarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		37AA2C92292FBB6200728EDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B99E6728F6F0160018C120 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B2E6832926288200E27191 /* Inter-Medium.otf in Resources */,
 				37B99E7928F6F0170018C120 /* LaunchScreen.storyboard in Resources */,
 				371817F12918341B0037978E /* Inter-Light.otf in Resources */,
 				371817EF291833980037978E /* KyivTypeSans-VarGX.ttf in Resources */,
@@ -340,6 +408,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37AA2C90292FBB6200728EDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B99E6528F6F0160018C120 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +445,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		37AA2C9F292FBB6200728EDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37AA2C93292FBB6200728EDC /* AuthentificationTarget */;
+			targetProxy = 37AA2C9E292FBB6200728EDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		37B99E7228F6F0160018C120 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -390,6 +473,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		37AA2CA2292FBB6200728EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U4V96C2NN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthentificationTarget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuthentificationTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eliseevaev.emotionalApp.AuthentificationTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37AA2CA3292FBB6200728EDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2U4V96C2NN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthentificationTarget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuthentificationTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eliseevaev.emotionalApp.AuthentificationTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		37B99E7B28F6F0170018C120 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,6 +702,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37AA2CA4292FBB6200728EDC /* Build configuration list for PBXNativeTarget "AuthentificationTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AA2CA2292FBB6200728EDC /* Debug */,
+				37AA2CA3292FBB6200728EDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37B99E6428F6F0160018C120 /* Build configuration list for PBXProject "emotionalApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

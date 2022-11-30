@@ -12,7 +12,7 @@ class TimePickScreenViewController: UIViewController {
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBAction func nextButtonAction(_ sender: UIButton) {
         timeSelect()
-        print(timeSelect())
+//        print(timeSelect())
         goToNextVC(vc: "TabBarViewController")
     }
     
@@ -27,7 +27,7 @@ class TimePickScreenViewController: UIViewController {
     func timeSelect() {
         // TODO: Не сохраняет время в UserDefaults
         let time = timeStartFormatter.string(from: timePicker.date)
-        
+        print(time)
         guard let data = try? JSONEncoder().encode(time) else {
             print("Невозможно собрать модель из currentUser")
             return

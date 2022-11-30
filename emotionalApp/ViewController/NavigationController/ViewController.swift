@@ -24,8 +24,11 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonAction(_ sender: Any) {
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: logInTextField.text ?? "")
+       
+        print(dictionary?.values)
+        
         print(dictionary)
-        userCheck()
+//        userCheck()
 //        goToNextVC(vc: "TabBarViewController")
     }
     
@@ -63,19 +66,23 @@ class ViewController: UIViewController {
     }
 
     private func userCheck() {
-        guard let data = userDefaults.data(forKey: Keys.userData.rawValue),
-//        guard let data = Locksmith.loadDataForUserAccount(userAccount: "MyAccount"),
-                let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else { return }
+//        guard let data = userDefaults.data(forKey: Keys.userData.rawValue),
+        //                let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else { return }
+        guard let data = Locksmith.loadDataForUserAccount(userAccount: logInTextField.text ?? "") else { return }
+        let wrappedData = Data(data.description.utf8)
+        let record = try? JSONDecoder().decode(UserDataModel.self, from: wrappedData)
+        
+        // TODO: Данные сохранены, но как достать их для сравнения?
+        
+        if record?.login.lowercased() == logInTextField.text!.lowercased() && record?.password == passwordTextField.text { goToNextVC(vc: "TabBarViewController") }
 
-        if record.login.lowercased() == logInTextField.text!.lowercased() && record.password == passwordTextField.text { goToNextVC(vc: "TabBarViewController") }
-
-        if record.login.lowercased() == logInTextField.text?.lowercased() && record.password != passwordTextField.text {
+        if record?.login.lowercased() == logInTextField.text?.lowercased() && record?.password != passwordTextField.text {
             showWrongPassword()
         }
 
         if logInTextField.text!.isEmpty {
             showNoData()
-        } else { if record.login.lowercased() != logInTextField.text!.lowercased() { showNoUser() } }
+        } else { if record?.login.lowercased() != logInTextField.text!.lowercased() { showNoUser() } }
     }
     
     
@@ -136,30 +143,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-//extension ViewController {
-//    
-//    private func registerKeyboardNotification() {
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(keyboardWillShow),
-//                                               name: UIResponder.keyboardWillShowNotification,
-//                                               object: nil)
-//        
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(keyboardWillHide),
-//                                               name: UIResponder.keyboardWillShowNotification,
-//                                               object: nil)
-//    }
-//    
-//    
-//    
-//    @objc private func keyboardWillShow(notification: Notification) {
-//        let userInfo = notification.userInfo
-//        let keyboardHeight = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//        scrollView.setContentOffset = CGPoint(x: 0, y: keyboardHeight.height / 2)
-//    }
-//    
-//    @objc private func keyboardWillHide(notification: Notification) {
-//        scrollView.setContentOffset = CGPoint.zero
-//    }
-//}

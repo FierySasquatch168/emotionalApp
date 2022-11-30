@@ -10,8 +10,11 @@ import Locksmith
 
 class RegistrationViewController: UIViewController {
     
-    private var userDefaults = UserDefaults.standard
-    private var userData: UserDataModel?
+    // MARK: Variables
+    
+//    private var userDefaults = UserDefaults.standard
+    private var userDataStorageProtocol: UserDataStorageProtocol?
+    private var userDataModel: UserDataModel?
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
@@ -25,23 +28,29 @@ class RegistrationViewController: UIViewController {
         case userData, name, age, login, email, password
     }
     
+   // MARK: @IBAction
+    
     @IBAction func registerActionButton(_ sender: UIButton) {
-        registrationCheck()
-//        goToNextVC(vc: "SecondScreenViewController")
+        if isValidInput() {
+            modelConstruction(name: nameTextField.text ?? "", age: ageTextField.text ?? "", login: loginTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+            userDataStorageProtocol?.save(user: userDataModel!)
+            goToNextVC(vc: "SecondScreenViewController")
+        } else {
+                showNoDataAlert()
+            }
     }
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDataModel = UserDataModel(name: "", age: "", login: "", email: "", password: "")
+//        userDataStorageProtocol = UserDataStorage()
+//        guard let dictionary = Locksmith.loadDataForUserAccount(userAccount: "b") else { return }
+//        print(dictionary)
     }
     
-    private func goToNextVC(vc: String) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
-        // с возможностью вернуться на предыдущую страницу
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-        // без возможности вернуться
-        // self.present(vc, animated: true)
-    }
+    // MARK: Alerts
     
     private func showNoDataAlert() {
         let alert = UIAlertController(
@@ -66,9 +75,28 @@ class RegistrationViewController: UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true)
     }
+ 
+    // MARK: Navigation Functions
     
-    private func store(name: String, age: String, login: String, email: String, password: String) {
-        if let name = nameTextField.text, let age = ageTextField.text, let login = loginTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
+    private func goToNextVC(vc: String) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: vc) else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
+    // MARK: UserCheck Functions
+    
+    private func modelConstruction(name: String, age: String, login: String, email: String, password: String) {
+        userDataModel?.name = name
+        userDataModel?.age = age
+        userDataModel?.login = login
+        userDataModel?.email = email
+        userDataModel?.password = password
+    }
+    
+//    private func store(model: UserDataProtocol) {
+        
+//        if let name = nameTextField.text, let age = ageTextField.text, let login = loginTextField.text, let email = emailTextField.text, let password = passwordTextField.text {
             //        = UserDataModel(
             //            name: nameTextField.text ?? "",
             //            age: ageTextField.text ?? "",
@@ -82,62 +110,39 @@ class RegistrationViewController: UIViewController {
             //        }
             
             //        userDefaults.set(data, forKey: Keys.userData.rawValue)
-            do {
-                try Locksmith.saveData(data: ["name": name, "age": age, "login": login, "email": email, "password": password], forUserAccount: loginTextField.text ?? "NoUser")
-            } catch {
-                print("Unable to save Data")
+//            do {
+//                try Locksmith.saveData(data: ["name": name, "age": age, "login": login, "email": email, "password": password], forUserAccount: "MyAccount")
+//            } catch {
+//                print("Unable to save Data")
+//            }
+//        }
+//    }
+    
+//    private func userCheck() -> UserDataModel {
+//                guard let data = userDefaults.data(forKey: Keys.userData.rawValue), let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else {
+//                    return .init(name: "NO", age: "NO", login: "NO", email: "NO", password: "NO")
+//                }
+//                return record
+//    }
+    
+    private func isValidInput() -> Bool {
+        var result = false
+        if !nameTextField.text!.isEmpty {
+            if !ageTextField.text!.isEmpty {
+                if !loginTextField.text!.isEmpty {
+                    if !emailTextField.text!.isEmpty {
+                        if !passwordTextField.text!.isEmpty {
+                            if repeatPasswordTextField.text == passwordTextField.text {
+                                result = true
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-    
-    private func userCheck() -> UserDataModel {
-                guard let data = userDefaults.data(forKey: Keys.userData.rawValue), let record = try? JSONDecoder().decode(UserDataModel.self, from: data) else {
-                    return .init(name: "NO", age: "NO", login: "NO", email: "NO", password: "NO")
-                }
-                return record
-//        guard let dictionary = Locksmith.loadDataForUserAccount(userAccount: "MyAccount") else {
-//            return
-//        }
-//        return dictionary
-    }
-    
-    private func registrationCheck() {
-        if !nameTextField.text!.isEmpty && !ageTextField.text!.isEmpty && !loginTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && repeatPasswordTextField.text == passwordTextField.text {
-            store(name: nameTextField.text!, age: ageTextField.text!, login: loginTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
-            goToNextVC(vc: "SecondScreenViewController")
-            print("\(userCheck())")
-        } else {
-                showNoDataAlert()
-        }
+        return result
     }
 
 }
 
 // MARK: Extensions
-
-//extension RegistrationViewController {
-//    
-//    private func registerKeyboardNotification() {
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(keyboardWillShow),
-//                                               name: UIResponder.keyboardWillShowNotification,
-//                                               object: nil)
-//        
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(keyboardWillHide),
-//                                               name: UIResponder.keyboardWillShowNotification,
-//                                               object: nil)
-//    }
-//    
-//    
-//    
-//    @objc private func keyboardWillShow(notification: Notification) {
-//        let userInfo = notification.userInfo
-//        let keyboardHeight = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//        scrollView.setContentOffset = CGPoint(x: 0, y: keyboardHeight.height / 2)
-//    }
-//    
-//    @objc private func keyboardWillHide(notification: Notification) {
-//        scrollView.setContentOffset = CGPoint.zero
-//    }
-//}

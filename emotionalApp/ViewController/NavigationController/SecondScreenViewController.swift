@@ -17,11 +17,14 @@ class SecondScreenViewController: UIViewController {
     
     private var userDefaults = UserDefaults.standard
     private var userStatistic: StatisticServiceProtocol?
+    
     private var happier: Bool = false
     private var noStress: Bool = false
     private var calmer: Bool = false
     private var noFears: Bool = false
     private var mood: Bool = false
+    
+//    private var preferencesArray: [String : Bool] = [Preferences.becomeHappier.rawValue: false, Preferences.getRidOfStress.rawValue: false, Preferences.feelCalmer.rawValue: false, Preferences.copeWithFears.rawValue: false, Preferences.analyzeMood.rawValue: false]
     
     private enum Preferences: String {
         case becomeHappier, getRidOfStress, feelCalmer, copeWithFears, analyzeMood, userPreferences
@@ -34,79 +37,45 @@ class SecondScreenViewController: UIViewController {
     }
     
     @IBAction func becomeHappierButtonTapped(_ sender: UIButton) {
-        
-        switch becomeHappierButton.layer.borderWidth {
-        case 0:
-            becomeHappierButton.layer.borderWidth = 1;
-            becomeHappierButton.layer.borderColor = UIColor.customPink?.cgColor;
-            happier = true
-        case 1:
-            becomeHappierButton.layer.borderWidth = 0;
-            happier = false
-        default: becomeHappierButton.layer.borderWidth = 0
-        }
+        buttonTap(button: sender)
+        happier = becomeHappierButton.layer.borderWidth == 0 ? false : true
     }
     
     @IBAction func ridOfStressButtonTapped(_ sender: UIButton) {
-        
-        switch ridOfStressButton.layer.borderWidth {
-        case 0:
-            ridOfStressButton.layer.borderWidth = 1;
-            ridOfStressButton.layer.borderColor = UIColor.customPink?.cgColor;
-            noStress = true
-        case 1:
-            ridOfStressButton.layer.borderWidth = 0;
-            noStress = false
-        default: ridOfStressButton.layer.borderWidth = 0
-        }
+        buttonTap(button: sender)
+        noStress = ridOfStressButton.layer.borderWidth == 0 ? false : true
     }
     
     @IBAction func feelCalmerButtonTapped(_ sender: UIButton) {
-        
-        switch feelCalmerButton.layer.borderWidth {
-        case 0:
-            feelCalmerButton.layer.borderWidth = 1;
-            feelCalmerButton.layer.borderColor = UIColor.customPink?.cgColor;
-            calmer = true
-        case 1:
-            feelCalmerButton.layer.borderWidth = 0;
-            calmer = false
-        default: feelCalmerButton.layer.borderWidth = 0
-        }
+        buttonTap(button: sender)
+        calmer = feelCalmerButton.layer.borderWidth == 0 ? false : true
     }
     
     @IBAction func copeWithFearsButtonTapped(_ sender: UIButton) {
-        
-        switch copeWithFearsButton.layer.borderWidth {
-        case 0:
-            copeWithFearsButton.layer.borderWidth = 1;
-            copeWithFearsButton.layer.borderColor = UIColor.customPink?.cgColor;
-            noFears = true
-        case 1:
-            copeWithFearsButton.layer.borderWidth = 0;
-            noFears = false
-        default: copeWithFearsButton.layer.borderWidth = 0
-        }
+        buttonTap(button: sender)
+        noFears = copeWithFearsButton.layer.borderWidth == 0 ? false : true
     }
     
     @IBAction func analyzeMoodButtonTapped(_ sender: UIButton) {
-        
-        switch analyzeMoodButton.layer.borderWidth {
-        case 0:
-            analyzeMoodButton.layer.borderWidth = 1;
-            analyzeMoodButton.layer.borderColor = UIColor.customPink?.cgColor;
-            mood = true
-        case 1:
-            analyzeMoodButton.layer.borderWidth = 0;
-            mood = false
-        default: analyzeMoodButton.layer.borderWidth = 0
-        }
+        buttonTap(button: sender)
+        mood = analyzeMoodButton.layer.borderWidth == 0 ? false : true
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         userStatistic?.storePreferences(become: happier, of: noStress, feel: calmer, cope: noFears, analyze: mood)
         goToNextVC(vc: "TimePickScreenViewController")
         print("\(preferenceCheck())")
+    }
+    
+    private func buttonTap(button: UIButton) {
+        switch button.layer.borderWidth {
+        case 0:
+            button.layer.borderWidth = 1;
+            button.layer.borderColor = UIColor.customPink?.cgColor;
+        case 1:
+            button.layer.borderWidth = 0;
+        default: button.layer.borderWidth = 0
+        }
     }
     
     private func goToNextVC(vc: String) {

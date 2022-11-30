@@ -67,7 +67,7 @@ extension AddMoodViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             label?.text = "Happy"
         case UIImage(named: "Resentment"):
             label?.text = "Resentment"
-        default: label?.text = "Name Error"
+        default: label?.text = "Image Error"
         }
     }
 }
