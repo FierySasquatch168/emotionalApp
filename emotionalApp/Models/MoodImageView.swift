@@ -5,7 +5,6 @@
 //  Created by Aleksandr Eliseev on 16.11.2022.
 //
 
-import Foundation
 import UIKit
 
 final class MoodImageView: UIView {

@@ -12,6 +12,7 @@
 		371817EF291833980037978E /* KyivTypeSans-VarGX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */; };
 		371817F12918341B0037978E /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 371817F02918341B0037978E /* Inter-Light.otf */; };
 		372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372381C529190F8F003C3D90 /* SecondScreenViewController.swift */; };
+		3752856D2946770200D88293 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3752856C2946770200D88293 /* Inter-Medium.otf */; };
 		377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6B6B29225B6000F55B55 /* TabBarViewController.swift */; };
 		3795B38829225EB700EAEC8A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38729225EB700EAEC8A /* DiaryViewController.swift */; };
 		3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */; };
@@ -20,7 +21,18 @@
 		37A4F34529251DE30049FF64 /* MoodPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34429251DE30049FF64 /* MoodPickerModel.swift */; };
 		37A4F34729251F0B0049FF64 /* MoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34629251F0B0049FF64 /* MoodImageView.swift */; };
 		37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F35229257D420049FF64 /* MoodBoardViewController.swift */; };
+		37A517222944CF62007180C4 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517212944CF62007180C4 /* MoodModel.swift */; };
+		37A517242944CF7F007180C4 /* DataUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517232944CF7F007180C4 /* DataUpdate.swift */; };
+		37A5172A2944D1D8007180C4 /* DiaryCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517282944D1D8007180C4 /* DiaryCustomCell.swift */; };
+		37A5172B2944D1D8007180C4 /* DiaryCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A517292944D1D8007180C4 /* DiaryCustomCell.xib */; };
+		37A81B5D294776830027DF17 /* LibraryCustomPopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A81B5B294776830027DF17 /* LibraryCustomPopularCell.swift */; };
+		37A81B5E294776830027DF17 /* LibraryCustomPopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A81B5C294776830027DF17 /* LibraryCustomPopularCell.xib */; };
+		37A81B6129477AFA0027DF17 /* LibraryCustomInspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A81B5F29477AFA0027DF17 /* LibraryCustomInspirationCell.swift */; };
+		37A81B6229477AFA0027DF17 /* LibraryCustomInspirationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A81B6029477AFA0027DF17 /* LibraryCustomInspirationCell.xib */; };
+		37A81B6529477B190027DF17 /* LibraryCustomNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A81B6329477B190027DF17 /* LibraryCustomNewCell.swift */; };
+		37A81B6629477B190027DF17 /* LibraryCustomNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A81B6429477B190027DF17 /* LibraryCustomNewCell.xib */; };
 		37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */; };
+		37B4364A293E605500D084AF /* MoodUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B43649293E605500D084AF /* MoodUpdateProtocol.swift */; };
 		37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6C28F6F0160018C120 /* AppDelegate.swift */; };
 		37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E6E28F6F0160018C120 /* SceneDelegate.swift */; };
 		37B99E7128F6F0160018C120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B99E7028F6F0160018C120 /* ViewController.swift */; };
@@ -44,6 +56,7 @@
 		371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KyivTypeSans-VarGX.ttf"; sourceTree = "<group>"; };
 		371817F02918341B0037978E /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
 		372381C529190F8F003C3D90 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
+		3752856C2946770200D88293 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		377F6B6B29225B6000F55B55 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		3795B38729225EB700EAEC8A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +65,18 @@
 		37A4F34429251DE30049FF64 /* MoodPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerModel.swift; sourceTree = "<group>"; };
 		37A4F34629251F0B0049FF64 /* MoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodImageView.swift; sourceTree = "<group>"; };
 		37A4F35229257D420049FF64 /* MoodBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBoardViewController.swift; sourceTree = "<group>"; };
+		37A517212944CF62007180C4 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
+		37A517232944CF7F007180C4 /* DataUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdate.swift; sourceTree = "<group>"; };
+		37A517282944D1D8007180C4 /* DiaryCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCustomCell.swift; sourceTree = "<group>"; };
+		37A517292944D1D8007180C4 /* DiaryCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryCustomCell.xib; sourceTree = "<group>"; };
+		37A81B5B294776830027DF17 /* LibraryCustomPopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCustomPopularCell.swift; sourceTree = "<group>"; };
+		37A81B5C294776830027DF17 /* LibraryCustomPopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCustomPopularCell.xib; sourceTree = "<group>"; };
+		37A81B5F29477AFA0027DF17 /* LibraryCustomInspirationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCustomInspirationCell.swift; sourceTree = "<group>"; };
+		37A81B6029477AFA0027DF17 /* LibraryCustomInspirationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCustomInspirationCell.xib; sourceTree = "<group>"; };
+		37A81B6329477B190027DF17 /* LibraryCustomNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCustomNewCell.swift; sourceTree = "<group>"; };
+		37A81B6429477B190027DF17 /* LibraryCustomNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCustomNewCell.xib; sourceTree = "<group>"; };
 		37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickScreenViewController.swift; sourceTree = "<group>"; };
+		37B43649293E605500D084AF /* MoodUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodUpdateProtocol.swift; sourceTree = "<group>"; };
 		37B99E6928F6F0160018C120 /* emotionalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emotionalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B99E6C28F6F0160018C120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B99E6E28F6F0160018C120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +122,7 @@
 				371817EC291833170037978E /* Gruppo-Regular.ttf */,
 				371817EE291833980037978E /* KyivTypeSans-VarGX.ttf */,
 				371817F02918341B0037978E /* Inter-Light.otf */,
+				3752856C2946770200D88293 /* Inter-Medium.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -106,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				37C0A9FE291B9E0800EC2B1A /* UserStatisticService.swift */,
+				37B43649293E605500D084AF /* MoodUpdateProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -113,6 +139,9 @@
 		371817F529184E2D0037978E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				37A517272944D1A7007180C4 /* CustomCells */,
+				37A517262944CFE0007180C4 /* Diary */,
+				37A81B5A294774C50027DF17 /* Library */,
 				37EAE2AB29224F9B006FCA2E /* NavigationController */,
 				37B99E7228F6F0160018C120 /* Main.storyboard */,
 				37B99E7728F6F0170018C120 /* LaunchScreen.storyboard */,
@@ -137,6 +166,39 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		37A517262944CFE0007180C4 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				3795B38729225EB700EAEC8A /* DiaryViewController.swift */,
+				37D2A9D22922A7EC001EA489 /* AddMoodViewController.swift */,
+				37A4F35229257D420049FF64 /* MoodBoardViewController.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		37A517272944D1A7007180C4 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				37A517282944D1D8007180C4 /* DiaryCustomCell.swift */,
+				37A517292944D1D8007180C4 /* DiaryCustomCell.xib */,
+				37A81B5F29477AFA0027DF17 /* LibraryCustomInspirationCell.swift */,
+				37A81B6029477AFA0027DF17 /* LibraryCustomInspirationCell.xib */,
+				37A81B5B294776830027DF17 /* LibraryCustomPopularCell.swift */,
+				37A81B5C294776830027DF17 /* LibraryCustomPopularCell.xib */,
+				37A81B6329477B190027DF17 /* LibraryCustomNewCell.swift */,
+				37A81B6429477B190027DF17 /* LibraryCustomNewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		37A81B5A294774C50027DF17 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3795B38B29225ED800EAEC8A /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		37A8872929195F610072D997 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +208,8 @@
 				37C0AA02291BBD5600EC2B1A /* AlertModel.swift */,
 				37A4F34429251DE30049FF64 /* MoodPickerModel.swift */,
 				37A4F34629251F0B0049FF64 /* MoodImageView.swift */,
+				37A517212944CF62007180C4 /* MoodModel.swift */,
+				37A517232944CF7F007180C4 /* DataUpdate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,8 +263,6 @@
 				37D12C68291A5A010065BA36 /* RegistrationViewController.swift */,
 				372381C529190F8F003C3D90 /* SecondScreenViewController.swift */,
 				37A8872729195BBA0072D997 /* TimePickScreenViewController.swift */,
-				37D2A9D22922A7EC001EA489 /* AddMoodViewController.swift */,
-				37A4F35229257D420049FF64 /* MoodBoardViewController.swift */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -209,9 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				377F6B6B29225B6000F55B55 /* TabBarViewController.swift */,
-				3795B38729225EB700EAEC8A /* DiaryViewController.swift */,
 				3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */,
-				3795B38B29225ED800EAEC8A /* LibraryViewController.swift */,
 				3795B38D29225EE200EAEC8A /* ProfileViewController.swift */,
 			);
 			path = TabBarController;
@@ -287,11 +347,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B99E7928F6F0170018C120 /* LaunchScreen.storyboard in Resources */,
+				3752856D2946770200D88293 /* Inter-Medium.otf in Resources */,
+				37A81B6229477AFA0027DF17 /* LibraryCustomInspirationCell.xib in Resources */,
 				371817F12918341B0037978E /* Inter-Light.otf in Resources */,
+				37A5172B2944D1D8007180C4 /* DiaryCustomCell.xib in Resources */,
 				371817EF291833980037978E /* KyivTypeSans-VarGX.ttf in Resources */,
 				37B99E7628F6F0170018C120 /* Assets.xcassets in Resources */,
+				37A81B5E294776830027DF17 /* LibraryCustomPopularCell.xib in Resources */,
 				371817ED291833170037978E /* Gruppo-Regular.ttf in Resources */,
 				37B99E7428F6F0160018C120 /* Main.storyboard in Resources */,
+				37A81B6629477B190027DF17 /* LibraryCustomNewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,11 +409,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A517242944CF7F007180C4 /* DataUpdate.swift in Sources */,
+				37A81B5D294776830027DF17 /* LibraryCustomPopularCell.swift in Sources */,
 				372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */,
 				37D2A9D32922A7EC001EA489 /* AddMoodViewController.swift in Sources */,
 				37C0AA03291BBD5600EC2B1A /* AlertModel.swift in Sources */,
 				3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */,
+				37A517222944CF62007180C4 /* MoodModel.swift in Sources */,
+				37A81B6529477B190027DF17 /* LibraryCustomNewCell.swift in Sources */,
 				37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */,
+				37A5172A2944D1D8007180C4 /* DiaryCustomCell.swift in Sources */,
 				37B99E7128F6F0160018C120 /* ViewController.swift in Sources */,
 				37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */,
 				37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */,
@@ -356,6 +426,7 @@
 				3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */,
 				377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */,
 				37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */,
+				37A81B6129477AFA0027DF17 /* LibraryCustomInspirationCell.swift in Sources */,
 				3795B38C29225ED800EAEC8A /* LibraryViewController.swift in Sources */,
 				37D2A9D129229B13001EA489 /* UserDataModel.swift in Sources */,
 				37A8872829195BBA0072D997 /* TimePickScreenViewController.swift in Sources */,
@@ -363,6 +434,7 @@
 				37B99E6F28F6F0160018C120 /* SceneDelegate.swift in Sources */,
 				37C2626A291AFBD60046DEE6 /* ColorExtension.swift in Sources */,
 				37A4F34529251DE30049FF64 /* MoodPickerModel.swift in Sources */,
+				37B4364A293E605500D084AF /* MoodUpdateProtocol.swift in Sources */,
 				37C0A9FF291B9E0800EC2B1A /* UserStatisticService.swift in Sources */,
 				37A4F34729251F0B0049FF64 /* MoodImageView.swift in Sources */,
 			);
@@ -520,7 +592,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,7 +622,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

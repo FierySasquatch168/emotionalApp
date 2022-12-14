@@ -24,10 +24,6 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonAction(_ sender: Any) {
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: logInTextField.text ?? "")
-               
-                print(dictionary?.values)
-                
-                print(dictionary)
         //        userCheck()
                 goToNextVC(vc: "TabBarViewController")
     }

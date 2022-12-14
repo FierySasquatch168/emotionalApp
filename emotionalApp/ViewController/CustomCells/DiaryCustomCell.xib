@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Light.otf">
+            <string>Inter-Light</string>
+        </array>
+        <array key="KyivTypeSans-VarGX.ttf">
+            <string>Kyiv*TypeSans_Bold3</string>
+            <string>Kyiv*TypeSans_Regular2</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" userLabel="DiaryCustomCell" customClass="DiaryCustomCell" customModule="emotionalApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="yNJ-bo-H6d" userLabel="Day Stack View">
+                        <rect key="frame" x="16" y="31.5" width="45" height="54"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-BL-np7" userLabel="Day">
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
+                                <fontDescription key="fontDescription" name="Kyiv*TypeSans_Bold3" family="Kyiv*Type Sans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsM-gE-JUH" userLabel="Month">
+                                <rect key="frame" x="0.0" y="30" width="45" height="24"/>
+                                <fontDescription key="fontDescription" name="Kyiv*TypeSans_Bold3" family="Kyiv*Type Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="kiV-Ni-Bil"/>
+                            <constraint firstAttribute="width" constant="45" id="vfO-UU-01f"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uJ1-Hx-rhs" userLabel="Mood Stack View">
+                        <rect key="frame" x="178" y="23" width="170" height="79.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29i-jy-oVF" userLabel="Time">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                <fontDescription key="fontDescription" name="Kyiv*TypeSans_Regular2" family="Kyiv*Type Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-CX-XIC" userLabel="Mood">
+                                <rect key="frame" x="0.0" y="17" width="170" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Kyiv*TypeSans_Regular2" family="Kyiv*Type Sans" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-yo-lwT" userLabel="Description">
+                                <rect key="frame" x="0.0" y="58.5" width="170" height="21"/>
+                                <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Pg6-yo-lwT" firstAttribute="top" secondItem="jl9-CX-XIC" secondAttribute="bottom" constant="15" id="EU1-Th-1yy"/>
+                            <constraint firstItem="29i-jy-oVF" firstAttribute="bottom" secondItem="jl9-CX-XIC" secondAttribute="top" id="Ieh-4s-K5v"/>
+                        </constraints>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iqw-dv-7fd">
+                        <rect key="frame" x="69" y="4" width="301" height="108.5"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a2z-So-i4N">
+                        <rect key="frame" x="80" y="22" width="87" height="72.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="a2z-So-i4N" secondAttribute="height" multiplier="1:1" id="Xpm-7x-yXW"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iqw-dv-7fd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="04J-88-70i"/>
+                    <constraint firstItem="yNJ-bo-H6d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="32s-XE-qbW"/>
+                    <constraint firstItem="uJ1-Hx-rhs" firstAttribute="leading" secondItem="a2z-So-i4N" secondAttribute="trailing" constant="11" id="5s9-1e-bTl"/>
+                    <constraint firstItem="iqw-dv-7fd" firstAttribute="trailing" secondItem="uJ1-Hx-rhs" secondAttribute="trailing" constant="22" id="95r-K2-8LX"/>
+                    <constraint firstItem="iqw-dv-7fd" firstAttribute="bottom" secondItem="a2z-So-i4N" secondAttribute="bottom" constant="18" id="Ctv-pb-kwf"/>
+                    <constraint firstItem="uJ1-Hx-rhs" firstAttribute="leading" secondItem="iqw-dv-7fd" secondAttribute="leading" constant="109" id="Jej-Dd-tGY"/>
+                    <constraint firstItem="iqw-dv-7fd" firstAttribute="leading" secondItem="yNJ-bo-H6d" secondAttribute="trailing" constant="8" id="LBe-XW-yKg"/>
+                    <constraint firstAttribute="bottom" secondItem="iqw-dv-7fd" secondAttribute="bottom" constant="4" id="Lm0-8a-aDJ"/>
+                    <constraint firstItem="a2z-So-i4N" firstAttribute="leading" secondItem="iqw-dv-7fd" secondAttribute="leading" constant="11" id="OlO-lM-G2A"/>
+                    <constraint firstItem="uJ1-Hx-rhs" firstAttribute="top" secondItem="iqw-dv-7fd" secondAttribute="top" constant="19" id="XuY-HG-P4y"/>
+                    <constraint firstItem="yNJ-bo-H6d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="agu-DC-2o3"/>
+                    <constraint firstItem="a2z-So-i4N" firstAttribute="top" secondItem="iqw-dv-7fd" secondAttribute="top" constant="18" id="cDn-bE-uxb"/>
+                    <constraint firstAttribute="trailing" secondItem="iqw-dv-7fd" secondAttribute="trailing" id="e1W-94-hfN"/>
+                    <constraint firstItem="iqw-dv-7fd" firstAttribute="bottom" secondItem="uJ1-Hx-rhs" secondAttribute="bottom" constant="10" id="voG-1d-csJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImage" destination="iqw-dv-7fd" id="oxp-B3-QpR"/>
+                <outlet property="dayLabel" destination="dYd-BL-np7" id="hhf-h9-83p"/>
+                <outlet property="monthLabel" destination="fsM-gE-JUH" id="Jjh-qQ-FzV"/>
+                <outlet property="moodDescription" destination="jl9-CX-XIC" id="LzY-6A-tOf"/>
+                <outlet property="moodImage" destination="a2z-So-i4N" id="0Ma-G1-NOe"/>
+                <outlet property="reasonsDescription" destination="Pg6-yo-lwT" id="s1D-na-WOY"/>
+                <outlet property="timeLabel" destination="29i-jy-oVF" id="lht-l3-w1N"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="53.073463268365821"/>
+        </tableViewCell>
+    </objects>
+</document>
