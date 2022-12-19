@@ -7,12 +7,22 @@
 
 import UIKit
 
-class MoodBoardViewController: UIViewController {
+class MoodBoardViewController: UIViewController, UpdatingDataControllerProtocol {
+    
+    
 
-    var updatingData: [MoodNotes] = []
-    var test: UpdatingDataControllerProtocol?
+    // Reference to managed context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    // Protocol conformance
+    var updatingData: [MoodNote] = []
+    var mood: UIImage?
+    var backgroundImage: UIImage?
+    var moodDescription: String?
+    
     var chosenReasons = [String]()
     var reasonsDictionary: [UIButton : String] = [:]
+    private let moodBackgroundChoice = ["Happy":"Rectangle 15", "Resentment":"Rectangle 14"]
     
     var handleUpdatedDataDelegate: ReasonsUpdateDelegate?
     
@@ -100,6 +110,7 @@ class MoodBoardViewController: UIViewController {
     // Переход от Б к А
     // Передача данных с помощью делегата
     @IBAction private func saveNote(_ sender: UIButton) {
+        
         // Формируем дату в нужном виде
         let dayNow = Date()
         let dayFormatter = DateFormatter()
@@ -117,18 +128,20 @@ class MoodBoardViewController: UIViewController {
         let time = timeFormatter.string(from: timeNow)
         
         // Формируем данные для передачи
-        let data = MoodNotes(
-            dayLabel: day,
-            monthLabel: month,
-            timeLabel: time,
-            moodImage: updatingData[updatingData.count-1].moodImage,
-            // TODO: Держать в уме порядок в массиве на случай ошибок при удалении
-            backgroundImage: updatingData[updatingData.count-1].backgroundImage,
-            moodDescription: updatingData[updatingData.count-1].moodDescription,
-            reasonsDescription: chosenReasons.joined(separator: ", "))
+        let newNote = MoodNote(context: self.context)
+        newNote.day = day
+        newNote.month = month
+        newNote.time = time
+        
+        guard let moodLabelText = moodLabel.text, let moodImage = UIImage(named: moodLabelText), let backgroundImage = UIImage(named: moodBackgroundChoice[moodLabelText]!) else { return }
+        
+        newNote.mood = moodImage
+        newNote.backgroundImage = backgroundImage
+        newNote.moodDescription = moodLabelText
+        newNote.reasonsDescription = chosenReasons.joined(separator: ", ")
         
         // Передаем данные делегату
-        handleUpdatedDataDelegate?.saveNote(data: data)
+        handleUpdatedDataDelegate?.saveNote(data: newNote)
                 
         // Возвращаемся на предыдущий экран
         self.navigationController?.popToRootViewController(animated: true)
@@ -139,11 +152,11 @@ class MoodBoardViewController: UIViewController {
     }
     
     private func setMoodLabel() {
-        moodLabel.text = updatingData[updatingData.count-1].moodDescription
+        moodLabel.text = moodDescription
     }
     
     private func setTopImage() {
-        topImageView.image = UIImage(named: moodLabel.text ?? "Close")
+        topImageView.image = mood
     }
     
     private func setButtonTitles() {

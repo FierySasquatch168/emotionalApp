@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class DiaryViewController: UIViewController, DataUpdateDelegate {
     
-    var updatedNotes: [MoodNotes] = [] {
+    // Reference to managed context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    // Data for the table
+//    var items: [MoodNote]?
+    
+    var updatedNotes: [MoodNote] = [] {
         didSet {
             setBackgroundImage()
         }
@@ -29,11 +36,15 @@ class DiaryViewController: UIViewController, DataUpdateDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
 
         cellRegister()
         setBackgroundImage()
         
         setAddButtonStyle()
+        
+        // Get items from Core Data
+        fetchNotes()
         
     }
     
@@ -47,6 +58,33 @@ class DiaryViewController: UIViewController, DataUpdateDelegate {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
+    // MARK: Core data functionality
+    
+    func fetchNotes() {
+        // Fetch the data from Core Data to display in the tableView
+        do {
+            
+            let request = MoodNote.fetchRequest() as NSFetchRequest<MoodNote>
+            
+            // Set filtering and sorting on the request
+//            let pred = NSPredicate(format: "name Contains %@", "Ted")
+//            request.predicate = pred
+            
+            let sort = NSSortDescriptor(key: "day", ascending: true)
+            request.sortDescriptors = [sort]
+            
+            self.updatedNotes = try context.fetch(request)
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        catch {
+            
+        }
+        
+    }
+    
     // MARK: CustomCell registration
     
     private func cellRegister() {
@@ -57,22 +95,34 @@ class DiaryViewController: UIViewController, DataUpdateDelegate {
 
     // MARK: Protocol method
     
-    func onDataUpdate(data: MoodNotes) {
+    func onDataUpdate(data: MoodNote) {
         updatedNotes.append(data)
+        
+        // Save the data
+        do {
+            try self.context.save()
+        }
+        catch {
+            
+        }
+        
         tableView.reloadData()
     }
     
-    func setBackgroundImage() {
+    private func setBackgroundImage() {
+        guard let image = UIImage(named: "Head") else { return }
         if updatedNotes.isEmpty {
-            mainImageView.image = UIImage(named: "Head")
+            mainImageView.image = image
         } else {
             backgroundView.isHidden = true
         }
     }
     
     private func setAddButtonStyle() {
+        guard let image = UIImage(named: "Plus Math") else { return }
+        
         addbutton.setTitle("", for: .normal)
-        addbutton.setImage(UIImage(named: "Plus Math"), for: .normal)
+        addbutton.setImage(image, for: .normal)
         
         addbutton.frame.size.width = 70
         addbutton.frame.size.height = 70
@@ -97,6 +147,31 @@ extension DiaryViewController: UITableViewDelegate, UITableViewDataSource {
     // количество строк в определенной секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return updatedNotes.count
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // Create swipe action
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            // Which note to remove
+            let noteToRemove = self.updatedNotes[indexPath.row]
+            
+            // Remove the note
+            self.context.delete(noteToRemove)
+            
+            // Save the data
+            do {
+                try self.context.save()
+            }
+            catch {
+                
+            }
+            
+            // Re-fetch the data
+            self.fetchNotes()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
     
 }
