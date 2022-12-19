@@ -24,15 +24,14 @@ class DiaryCustomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
     
-    func set(note: MoodNotes) {
+    func set(note: MoodNote) {
         backgroundImage.image = note.backgroundImage
-        dayLabel.text = note.dayLabel
-        timeLabel.text = note.timeLabel
-        moodImage.image = note.moodImage
-        monthLabel.text = note.monthLabel
+        dayLabel.text = note.day
+        timeLabel.text = note.time
+        moodImage.image = note.mood
+        monthLabel.text = note.month
         moodDescription.text = note.moodDescription
         reasonsDescription.text = note.reasonsDescription
     }

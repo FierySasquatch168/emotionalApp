@@ -7,9 +7,18 @@
 
 import UIKit
 
-class AddMoodViewController: UIViewController, ReasonsUpdateDelegate {
+class AddMoodViewController: UIViewController, ReasonsUpdateDelegate, UpdatingDataControllerProtocol {
 
-    var updatingData: [MoodNotes] = []
+    // Reference to managed context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    // Protocol conformance
+    var updatingData: [MoodNote] = []
+    var mood: UIImage?
+    var backgroundImage: UIImage?
+    var moodDescription: String?
+    
+    private let moodBackgroundChoice = ["Happy":"Rectangle 15", "Resentment":"Rectangle 14"]
     
     var storyboardInstance = UIStoryboard(name: "Main", bundle: nil)
     var handleUpdatedDataDelegate: DataUpdateDelegate?
@@ -28,7 +37,7 @@ class AddMoodViewController: UIViewController, ReasonsUpdateDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        pickerViewSetup()
         moodLabel.text = "Happy"
     }
     
@@ -36,20 +45,14 @@ class AddMoodViewController: UIViewController, ReasonsUpdateDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let editScreen = storyboard.instantiateViewController(withIdentifier: "MoodBoardViewController") as! MoodBoardViewController
         
-        let currentMood = moodLabel.text!
-        let data = MoodNotes(
-            dayLabel: "",
-            monthLabel: "",
-            timeLabel: "",
-            moodImage: (((moodLabel.text?.contains("Happy"))! ? UIImage(named: "Happy") : UIImage(named: "Resentment"))!),
-            backgroundImage: (((moodLabel.text?.contains("Happy"))! ? UIImage(named: "Rectangle 15") : UIImage(named: "Rectangle 14"))!),
-            moodDescription: currentMood,
-            reasonsDescription: "")
+        // Формируем данные для передачи
         
-        updatingData.append(data)
+        guard let moodLabelText = moodLabel.text, let moodImage = UIImage(named: moodLabelText), let actualBackgroundImage = UIImage(named: moodBackgroundChoice[moodLabelText]!) else { return }
         
         // передаем данные
-        editScreen.updatingData = updatingData
+        editScreen.mood = moodImage
+        editScreen.backgroundImage = actualBackgroundImage
+        editScreen.moodDescription = moodLabelText
         
         // устанавливаем текущий класс в качестве делегата
         editScreen.handleUpdatedDataDelegate = self
@@ -83,23 +86,26 @@ class AddMoodViewController: UIViewController, ReasonsUpdateDelegate {
         let time = timeFormatter.string(from: timeNow)
         
         // Формируем данные для передачи
-        let data = MoodNotes(
-            dayLabel: day,
-            monthLabel: month,
-            timeLabel: time,
-            moodImage: (((moodLabel.text?.contains("Happy"))! ? UIImage(named: "Happy") : UIImage(named: "Resentment"))!),
-            backgroundImage: (((moodLabel.text?.contains("Happy"))! ? UIImage(named: "Rectangle 15") : UIImage(named: "Rectangle 14"))!),
-            moodDescription: moodLabel.text!,
-            reasonsDescription: "You preferred not to describe your feelings")
+        let newNote = MoodNote(context: self.context)
+        newNote.day = day
+        newNote.month = month
+        newNote.time = time
+        
+        guard let moodLabelText = moodLabel.text, let moodImage = UIImage(named: moodLabelText), let backgroundImage = UIImage(named: moodBackgroundChoice[moodLabelText]!) else { return }
+        
+        newNote.mood = moodImage
+        newNote.backgroundImage = backgroundImage
+        newNote.moodDescription = moodLabelText
+        newNote.reasonsDescription = "You preferred not to describe your feelings"
         
         // Передаем данные делегату
-        handleUpdatedDataDelegate?.onDataUpdate(data: data)
+        handleUpdatedDataDelegate?.onDataUpdate(data: newNote)
         
         // Возвращаемся на предыдущий экран
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func saveNote(data: MoodNotes) {
+    func saveNote(data: MoodNote) {
 
         // Передаем данные делегату
         handleUpdatedDataDelegate?.onDataUpdate(data: data)
@@ -166,7 +172,7 @@ extension AddMoodViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 }
 
 private extension AddMoodViewController {
-    func setup() {
+    func pickerViewSetup() {
         pickerView.delegate = self
         pickerView.selectRow(0, inComponent: 0, animated: true)
         pickerView.subviews[1].backgroundColor = .clear

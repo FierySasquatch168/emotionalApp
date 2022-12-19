@@ -13,6 +13,7 @@
 		371817F12918341B0037978E /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 371817F02918341B0037978E /* Inter-Light.otf */; };
 		372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372381C529190F8F003C3D90 /* SecondScreenViewController.swift */; };
 		3752856D2946770200D88293 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3752856C2946770200D88293 /* Inter-Medium.otf */; };
+		37779B592949F62B001B8943 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37779B572949F62B001B8943 /* CoreDataModel.xcdatamodeld */; };
 		377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377F6B6B29225B6000F55B55 /* TabBarViewController.swift */; };
 		3795B38829225EB700EAEC8A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38729225EB700EAEC8A /* DiaryViewController.swift */; };
 		3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */; };
@@ -21,7 +22,7 @@
 		37A4F34529251DE30049FF64 /* MoodPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34429251DE30049FF64 /* MoodPickerModel.swift */; };
 		37A4F34729251F0B0049FF64 /* MoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F34629251F0B0049FF64 /* MoodImageView.swift */; };
 		37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A4F35229257D420049FF64 /* MoodBoardViewController.swift */; };
-		37A517222944CF62007180C4 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517212944CF62007180C4 /* MoodModel.swift */; };
+		37A517222944CF62007180C4 /* MoodModelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517212944CF62007180C4 /* MoodModelCoreData.swift */; };
 		37A517242944CF7F007180C4 /* DataUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517232944CF7F007180C4 /* DataUpdate.swift */; };
 		37A5172A2944D1D8007180C4 /* DiaryCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A517282944D1D8007180C4 /* DiaryCustomCell.swift */; };
 		37A5172B2944D1D8007180C4 /* DiaryCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A517292944D1D8007180C4 /* DiaryCustomCell.xib */; };
@@ -41,7 +42,6 @@
 		37B99E7928F6F0170018C120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B99E7728F6F0170018C120 /* LaunchScreen.storyboard */; };
 		37C0A9FF291B9E0800EC2B1A /* UserStatisticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0A9FE291B9E0800EC2B1A /* UserStatisticService.swift */; };
 		37C0AA03291BBD5600EC2B1A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0AA02291BBD5600EC2B1A /* AlertModel.swift */; };
-		37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0AA06291BE77B00EC2B1A /* TimeModel.swift */; };
 		37C2626A291AFBD60046DEE6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C26269291AFBD60046DEE6 /* ColorExtension.swift */; };
 		37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C68291A5A010065BA36 /* RegistrationViewController.swift */; };
 		37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */; };
@@ -57,6 +57,7 @@
 		371817F02918341B0037978E /* Inter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.otf"; sourceTree = "<group>"; };
 		372381C529190F8F003C3D90 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		3752856C2946770200D88293 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		37779B582949F62B001B8943 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		377F6B6B29225B6000F55B55 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		3795B38729225EB700EAEC8A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		3795B38929225EC300EAEC8A /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +66,7 @@
 		37A4F34429251DE30049FF64 /* MoodPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerModel.swift; sourceTree = "<group>"; };
 		37A4F34629251F0B0049FF64 /* MoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodImageView.swift; sourceTree = "<group>"; };
 		37A4F35229257D420049FF64 /* MoodBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBoardViewController.swift; sourceTree = "<group>"; };
-		37A517212944CF62007180C4 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
+		37A517212944CF62007180C4 /* MoodModelCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModelCoreData.swift; sourceTree = "<group>"; };
 		37A517232944CF7F007180C4 /* DataUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdate.swift; sourceTree = "<group>"; };
 		37A517282944D1D8007180C4 /* DiaryCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCustomCell.swift; sourceTree = "<group>"; };
 		37A517292944D1D8007180C4 /* DiaryCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryCustomCell.xib; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		37B99E7A28F6F0170018C120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C0A9FE291B9E0800EC2B1A /* UserStatisticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatisticService.swift; sourceTree = "<group>"; };
 		37C0AA02291BBD5600EC2B1A /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
-		37C0AA06291BE77B00EC2B1A /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		37C26269291AFBD60046DEE6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		37D12C68291A5A010065BA36 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesDataModel.swift; sourceTree = "<group>"; };
@@ -166,6 +166,13 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		375283CF294A235000731515 /* CoreDateModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDateModel;
+			sourceTree = "<group>";
+		};
 		37A517262944CFE0007180C4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,12 +211,12 @@
 			children = (
 				37D2A9D029229B13001EA489 /* UserDataModel.swift */,
 				37D12C6A291A60950065BA36 /* UserPreferencesDataModel.swift */,
-				37C0AA06291BE77B00EC2B1A /* TimeModel.swift */,
 				37C0AA02291BBD5600EC2B1A /* AlertModel.swift */,
 				37A4F34429251DE30049FF64 /* MoodPickerModel.swift */,
 				37A4F34629251F0B0049FF64 /* MoodImageView.swift */,
-				37A517212944CF62007180C4 /* MoodModel.swift */,
+				37A517212944CF62007180C4 /* MoodModelCoreData.swift */,
 				37A517232944CF7F007180C4 /* DataUpdate.swift */,
+				37779B572949F62B001B8943 /* CoreDataModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 		37B99E6B28F6F0160018C120 /* emotionalApp */ = {
 			isa = PBXGroup;
 			children = (
+				375283CF294A235000731515 /* CoreDateModel */,
 				37C26268291AFBBB0046DEE6 /* Helpers */,
 				37A8872929195F610072D997 /* Models */,
 				37B99E7A28F6F0170018C120 /* Info.plist */,
@@ -410,19 +418,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A517242944CF7F007180C4 /* DataUpdate.swift in Sources */,
+				37779B592949F62B001B8943 /* CoreDataModel.xcdatamodeld in Sources */,
 				37A81B5D294776830027DF17 /* LibraryCustomPopularCell.swift in Sources */,
 				372381C629190F8F003C3D90 /* SecondScreenViewController.swift in Sources */,
 				37D2A9D32922A7EC001EA489 /* AddMoodViewController.swift in Sources */,
 				37C0AA03291BBD5600EC2B1A /* AlertModel.swift in Sources */,
 				3795B38A29225EC300EAEC8A /* AnalyticsViewController.swift in Sources */,
-				37A517222944CF62007180C4 /* MoodModel.swift in Sources */,
+				37A517222944CF62007180C4 /* MoodModelCoreData.swift in Sources */,
 				37A81B6529477B190027DF17 /* LibraryCustomNewCell.swift in Sources */,
 				37D12C69291A5A010065BA36 /* RegistrationViewController.swift in Sources */,
 				37A5172A2944D1D8007180C4 /* DiaryCustomCell.swift in Sources */,
 				37B99E7128F6F0160018C120 /* ViewController.swift in Sources */,
 				37D12C6B291A60950065BA36 /* UserPreferencesDataModel.swift in Sources */,
 				37A4F35329257D420049FF64 /* MoodBoardViewController.swift in Sources */,
-				37C0AA07291BE77B00EC2B1A /* TimeModel.swift in Sources */,
 				3795B38E29225EE200EAEC8A /* ProfileViewController.swift in Sources */,
 				377F6B6C29225B6000F55B55 /* TabBarViewController.swift in Sources */,
 				37B99E6D28F6F0160018C120 /* AppDelegate.swift in Sources */,
@@ -658,6 +666,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		37779B572949F62B001B8943 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				37779B582949F62B001B8943 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 37779B582949F62B001B8943 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 37B99E6128F6F0160018C120 /* Project object */;
 }
